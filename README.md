@@ -5,7 +5,7 @@ A sequential 64 bit id generator that can save the sequence to disk
 
 There are numerous examples of how to implement twitter snowflake or variations of this id generator so I decided to do a sequential one that saves the state to disk every given number of requests.
 
-One advantage would be that the system does not need to have access UNIX time and having a counter that measures system uptime in milliseconds is enough for the requests throttling to work, if we want that feature (e.g. an array of microcontrollers not connected to the internet). Because of this, the current state needs to be saved in case of a restart. 
+One advantage would be that the system does not need to have access to UNIX time and having a counter that measures system uptime in milliseconds is enough for the requests throttling to work, if we want that feature (e.g. an array of microcontrollers not connected to the internet). Because of this, the current state needs to be saved in case of a restart. 
 
 In theory, Twitter snowflake can produce 4096 unique ids every 1 millisecond and then rollback (with a counter of 12bits). Sequential can theoretically produce MAX_INT / 1024.
 
