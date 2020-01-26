@@ -18,7 +18,7 @@ In theory, Twitter snowflake can produce 4096 unique ids every 1 millisecond and
 
 Sequential has a few config options:
 
-```JSON
+```PYTHON
 config = {
     'starting_id': -1,
     'id_file_path': './id.dat',
